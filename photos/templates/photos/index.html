@@ -30,7 +30,10 @@
                     host + '/photos/list',
                     function (data) {
                         photos = data.photos.map(function (item) {
-                            return { src: host + '/' + item }
+                            return {
+                                src: host + '/' + item,
+                                cover: false,
+                            }
                         })
 
                         $('body').vegas({
